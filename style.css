@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 0;
+    font-family: var(--fuente);
+}
+
+:root {
+
+
+    /* colores primarios */
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    /* colores neutrales */
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+
+    /* fuente */
+    --fuente: 'Barlow Semi Condensed', sans-serif;
+}
+
+.container__general {
+    width: 375px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.tarjetas__names {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    width: 100%;
+    margin: 0 auto;
+    grid-gap: 10px;
+    position: relative;
+    border: 1px solid red;
+}
+
+.tarjetas__names .img__perfil {
+    border-radius: 50%;
+    border: 2px solid var(--Very-dark-grayish-blue);
+    
+}
+
+.tarjetas__names .daniel {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "foto nombre"
+    "texto texto";
+    width: 95%;
+    border: 1px solid red;
+    margin: 0 auto;
+    padding: 18px 25px;
+    /* font-size: ; */
+    position: relative;
+}
+
+.tarjetas__names .daniel .img__daniel {
+    grid-area: foto;
+    /* margin-top: 10px; */
+}
+
+.tarjetas__names .daniel .tarjeta__one {
+    grid-area: nombre;
+    display: inline;
+    position: relative;
+    top: 15px;
+    right: 22px;
+    font-size: 1.05em;
+}
+
+.tarjetas__names .daniel .verificacion {
+    grid-area: nombre;
+    display: inline-block;
+    position: relative;
+    top: 35px;
+    right: 22px;
+    margin-bottom: 60px;
+    font-size: .9em;
+}
+
+.container__general .daniel .daniel__parrafo {
+    grid-area: texto;
+    position: relative;
+    z-index: 200;
+}
+
+.tarjetas__names .daniel .img__comillas {
+    position: absolute;
+    right: 1em;
+    z-index: 0;
+    height: 126px;
+    opacity: 10;
+}
