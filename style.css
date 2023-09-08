@@ -34,7 +34,7 @@
     grid-template-rows: repeat(5, auto);
     width: 100%;
     margin: 0 auto;
-    grid-gap: 10px;
+    grid-gap: 30px;
     position: relative;
     border: 1px solid red;
 }
@@ -45,6 +45,7 @@
     
 }
 
+/* Primera tarjeta Daniel */
 .tarjetas__names .daniel {
     display: grid;
     grid-template-columns: 30% 70%;
@@ -53,11 +54,14 @@
     "foto nombre"
     "texto texto";
     width: 95%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 0 auto;
-    padding: 18px 25px;
+    padding: 18px 30px;
     /* font-size: ; */
     position: relative;
+    background: var(--Moderate-violet);
+    border-radius: 10px;
+    margin-top: 2em;
 }
 
 .tarjetas__names .daniel .img__daniel {
@@ -82,12 +86,21 @@
     right: 22px;
     margin-bottom: 60px;
     font-size: .9em;
+    opacity: .5;
+}
+
+.container__general .daniel .parrafo__daniel {
+    color: var(--White);
+    font-weight: 600;
+    font-size: 1.41em;
+    
 }
 
 .container__general .daniel .daniel__parrafo {
     grid-area: texto;
     position: relative;
     z-index: 200;
+    color: var(--Light-gray);
 }
 
 .tarjetas__names .daniel .img__comillas {
@@ -95,5 +108,56 @@
     right: 1em;
     z-index: 0;
     height: 126px;
-    opacity: 10;
+    opacity: .5;
+}
+
+/* Segunda tarjeta Jonathan */
+.tarjetas__names .jonathan {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "foto nombre"
+    "texto texto";
+    width: 95%;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    padding: 18px 30px;
+    /* font-size: ; */
+    position: relative;
+    background: var(--Very-dark-grayish-blue);
+    border-radius: 10px;
+}
+
+.tarjetas__names .jonathan .tarjeta__two {
+    grid-area: nombre;
+    display: inline;
+    position: relative;
+    top: 15px;
+    right: 22px;
+    font-size: 1.05em;
+    color: var(--White);
+}
+
+.tarjetas__names .jonathan .verificacion {
+    grid-area: nombre;
+    display: inline-block;
+    position: relative;
+    top: 35px;
+    right: 22px;
+    margin-bottom: 60px;
+    font-size: .9em;
+    opacity: .5;
+}
+
+.container__general .jonathan .parrafo__jonathan {
+        color: var(--White);
+        font-weight: 600;
+        font-size: 1.41em;
+}
+
+.container__general .jonathan .jonathan__parrafo {
+    grid-area: texto;    
+    color: var(--Light-gray);
+
 }
