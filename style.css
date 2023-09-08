@@ -6,8 +6,6 @@
 }
 
 :root {
-
-
     /* colores primarios */
     --Moderate-violet: hsl(263, 55%, 52%);
     --Very-dark-grayish-blue: hsl(217, 19%, 35%);
@@ -36,7 +34,7 @@
     margin: 0 auto;
     grid-gap: 30px;
     position: relative;
-    border: 1px solid red;
+    background: var(--Light-grayish-blue);
 }
 
 .tarjetas__names .img__perfil {
@@ -45,8 +43,12 @@
     
 }
 
-/* Primera tarjeta Daniel */
-.tarjetas__names .daniel {
+/* todas las tarjetas juntas porque comparten propiedades */
+.tarjetas__names .daniel,
+.tarjetas__names .jonathan,
+.tarjetas__names .jeanette,
+.tarjetas__names .patrick,
+.tarjetas__names .kira {
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: repeat(2, auto);
@@ -54,22 +56,27 @@
     "foto nombre"
     "texto texto";
     width: 95%;
-    /* border: 1px solid red; */
     margin: 0 auto;
     padding: 18px 30px;
-    /* font-size: ; */
     position: relative;
-    background: var(--Moderate-violet);
     border-radius: 10px;
+}
+
+/* Primera tarjeta Daniel */
+.tarjetas__names .daniel {
+    background: var(--Moderate-violet);
     margin-top: 2em;
 }
 
-.tarjetas__names .daniel .img__daniel {
+.tarjetas__names .daniel .img__perfil {
     grid-area: foto;
-    /* margin-top: 10px; */
 }
 
-.tarjetas__names .daniel .tarjeta__one {
+.tarjetas__names .daniel .tarjeta__one,
+.tarjetas__names .jonathan .tarjeta__two,
+.tarjetas__names .jeanette .tarjeta__three,
+.tarjetas__names .patrick .tarjeta__for,
+.tarjetas__names .kira .tarjeta__five {
     grid-area: nombre;
     display: inline;
     position: relative;
@@ -78,7 +85,11 @@
     font-size: 1.05em;
 }
 
-.tarjetas__names .daniel .verificacion {
+.tarjetas__names .daniel .verificacion,
+.tarjetas__names .jonathan .verificacion,
+.tarjetas__names .jeanette .verificacion,
+.tarjetas__names .patrick .verificacion,
+.tarjetas__names .kira .verificacion {
     grid-area: nombre;
     display: inline-block;
     position: relative;
@@ -89,14 +100,18 @@
     opacity: .5;
 }
 
-.container__general .daniel .parrafo__daniel {
+.tarjetas__names .daniel .parrafo__daniel,
+.tarjetas__names .jonathan .parrafo__jonathan,
+.tarjetas__names .jeanette .parrafo__jeanette,
+.tarjetas__names .patrick .parrafo__patrick,
+.tarjetas__names .kira .parrafo__kira {
     color: var(--White);
     font-weight: 600;
-    font-size: 1.41em;
+    font-size: 1.40em;
     
 }
 
-.container__general .daniel .daniel__parrafo {
+.tarjetas__names .daniel .daniel__parrafo {
     grid-area: texto;
     position: relative;
     z-index: 200;
@@ -113,51 +128,60 @@
 
 /* Segunda tarjeta Jonathan */
 .tarjetas__names .jonathan {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: 
-    "foto nombre"
-    "texto texto";
-    width: 95%;
-    /* border: 1px solid red; */
-    margin: 0 auto;
-    padding: 18px 30px;
-    /* font-size: ; */
-    position: relative;
     background: var(--Very-dark-grayish-blue);
-    border-radius: 10px;
 }
 
 .tarjetas__names .jonathan .tarjeta__two {
-    grid-area: nombre;
-    display: inline;
-    position: relative;
-    top: 15px;
-    right: 22px;
-    font-size: 1.05em;
     color: var(--White);
 }
 
-.tarjetas__names .jonathan .verificacion {
-    grid-area: nombre;
-    display: inline-block;
-    position: relative;
-    top: 35px;
-    right: 22px;
-    margin-bottom: 60px;
-    font-size: .9em;
-    opacity: .5;
-}
-
-.container__general .jonathan .parrafo__jonathan {
-        color: var(--White);
-        font-weight: 600;
-        font-size: 1.41em;
-}
-
-.container__general .jonathan .jonathan__parrafo {
+.tarjetas__names .jonathan .jonathan__parrafo,
+.tarjetas__names .jeanette .jeanette__parrafo,
+.tarjetas__names .patrick .patrick__parrafo,
+.tarjetas__names .kira .kira__parrafo {
     grid-area: texto;    
     color: var(--Light-gray);
 
+}
+
+/* tercera tarjeta Jeanette */
+.tarjetas__names .jeanette {
+    background: var(--White);
+}
+
+.tarjetas__names .jeanette .tarjeta__three {
+    color: var(--Very-dark-blackish-blue);
+    opacity: .6;
+}
+
+.tarjetas__names .jeanette .parrafo__jeanette {
+    color: var(--Very-dark-blackish-blue);
+}
+
+/* cuarta tarjeta patrick */
+.tarjetas__names .patrick {
+    background: var(--Very-dark-blackish-blue);
+}
+
+.tarjetas__names .patrick .tarjeta__for {
+    color: var(--White);
+}
+
+.tarjetas__names .patrick .verificacion,
+.tarjetas__names .kira .verificacion {
+    opacity: .6;
+}
+
+/* quinta tarjeta kira */
+.tarjetas__names .kira {
+    background: var(--White);
+}
+
+.tarjetas__names .kira .tarjeta__five {
+    color: var(--Very-dark-blackish-blue);
+    opacity: .6;
+}
+
+.tarjetas__names .kira .parrafo__kira {
+    color: var(--Very-dark-blackish-blue);
 }
