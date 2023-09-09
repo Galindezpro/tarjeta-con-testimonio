@@ -23,7 +23,7 @@
 .container__general {
     width: 375px;
     margin: 0 auto;
-    height: 100vh;
+    height: 1000px;
 }
 
 .tarjetas__names {
@@ -184,4 +184,86 @@
 
 .tarjetas__names .kira .parrafo__kira {
     color: var(--Very-dark-blackish-blue);
+}
+
+@media screen and (min-width: 700px) {
+    .container__general {
+        width: 1400px;
+    }
+    
+    .tarjetas__names {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "daniel daniel jonathan kira"
+        "jeanette patrick patrick kira";
+        gap: 10px;
+        margin-top: 200px;
+    }
+
+    .tarjetas__names .daniel {
+        grid-area: daniel;
+        margin: 0;
+        .tarjeta__one {
+            right: 100px;
+        }
+        .verificacion {
+            right: 100px;
+        }
+    }
+
+    .tarjetas__names .daniel .img__comillas {
+        position: absolute;
+        right: 8em;
+        z-index: 0;
+        height: 126px;
+        opacity: .5;
+    }
+
+    .tarjetas__names .jonathan {
+        grid-area: jonathan;
+        .tarjeta__two {
+            left: 5px;
+        }
+        .verificacion {
+            left: 5px;
+        }
+    }
+
+    .tarjetas__names .jeanette {
+        grid-area: jeanette;
+        height: 95%;
+        margin-left: 19px;
+        .tarjeta__three {
+            left: 5px;
+        }
+
+        .verificacion {
+            left: 5px;
+        }
+    }
+
+    .tarjetas__names .patrick {
+        grid-area: patrick;
+        margin-left: 25px;
+        .tarjeta__for {
+            right: 90px;
+        }
+        .verificacion {
+            right: 90px;
+        }
+    }
+
+    .tarjetas__names .kira {
+        grid-area: kira;
+        height: 100%;
+        margin-bottom: 19px;
+        .tarjeta__five {
+            left: 7px;
+        }
+        .verificacion {
+            left: 7px;
+        }
+    }
 }
